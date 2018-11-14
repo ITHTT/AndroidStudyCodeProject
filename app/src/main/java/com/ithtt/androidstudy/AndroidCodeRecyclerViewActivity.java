@@ -1,5 +1,6 @@
 package com.ithtt.androidstudy;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +22,12 @@ public class AndroidCodeRecyclerViewActivity extends BaseActivity{
 
     protected List<AndroidCodeEntity> androidCodeList;
     protected AndroidCodeAdapter adapter=null;
+
+    public static void startAndroidCodeActivity(Context context, String[] arrays){
+        Intent intent=new Intent(context,AndroidCodeRecyclerViewActivity.class);
+        intent.putExtra(ANDROID_CODE_ARRAY,arrays);
+        context.startActivity(intent);
+    }
 
     @Override
     protected int getContentLayout() {

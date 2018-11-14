@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ithtt.androidstudy.androidview.AndroidViewActivity;
 import com.ithtt.androidstudy.app.BaseActivity;
 
 import butterknife.OnClick;
@@ -28,8 +29,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.item_androidview)
     protected void onClickAndroidView(View view){
-        Intent intent=new Intent(this,AndroidCodeRecyclerViewActivity.class);
-        intent.putExtra(AndroidCodeRecyclerViewActivity.ANDROID_CODE_ARRAY,getResources().getStringArray(R.array.android_view));
+        Intent intent=new Intent(this,AndroidViewActivity.class);
         startActivity(intent);
     }
 }

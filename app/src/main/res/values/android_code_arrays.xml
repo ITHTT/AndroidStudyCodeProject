@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="android_view">
+        <item>com.ithtt.androidstudy.androidview.recyclerview.RecyclerViewActivity@RecyclerView@RecyclerView控件学习</item>
+    </array>
+
+    <array name="android_custom_view">
         <item>com.ithtt.androidstudy.androidview.customview.dashboardview.DashBoardActivity@DashBoardView@仿支付宝芝麻信用分仪表盘效果</item>
         <item>com.ithtt.androidstudy.androidview.customview.clockview.ClockViewActivity@ClockView@时钟控件</item>
         <item>com.ithtt.androidstudy.androidview.customview.pageviewtransition.PagerViewTransitionActivity@PagerViewTransition@一个ViewPager的卡片,具有垂直滑动效果并支持activity transition</item>

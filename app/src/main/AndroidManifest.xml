@@ -21,6 +21,8 @@
 
         <activity android:name=".AndroidCodeRecyclerViewActivity"/>
 
+        <activity android:name=".androidview.AndroidViewActivity"/>
+
         <activity android:name=".androidview.customview.dashboardview.DashBoardActivity"/>
 
         <activity android:name=".androidview.customview.clockview.ClockViewActivity"/>
@@ -40,6 +42,8 @@
         <activity android:name=".androidview.customview.marqueeview.MarqueeViewActivity"/>
 
         <activity android:name=".androidview.customview.animtextview.AnimTextViewActivity"/>
+
+        <activity android:name=".androidview.recyclerview.RecyclerViewActivity"/>
     </application>
 
 </manifest>
