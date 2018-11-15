@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.blankj.utilcode.util.Utils;
 import com.ithtt.androidstudy.androidview.AndroidViewActivity;
 import com.ithtt.androidstudy.app.BaseActivity;
 
@@ -19,7 +20,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        Utils.init(this.getApplicationContext());
     }
 
     @Override

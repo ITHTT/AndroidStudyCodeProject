@@ -43,7 +43,13 @@
 
         <activity android:name=".androidview.customview.animtextview.AnimTextViewActivity"/>
 
-        <activity android:name=".androidview.recyclerview.RecyclerViewActivity"/>
+        <activity android:name=".androidview.systemview.recyclerview.RecyclerViewActivity"/>
+
+        <activity android:name=".androidview.systemview.recyclerview.LinearLayoutActivity"/>
+
+        <activity android:name=".androidview.systemview.recyclerview.GridLayoutActivity"/>
+
+        <activity android:name=".androidview.systemview.recyclerview.StaggeredGridLayoutActivity"/>
     </application>
 
 </manifest>

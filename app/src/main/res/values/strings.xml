@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AndroidStudyCode</string>
+
+    <string-array name="recycler_test_datas">
+        <item>http://sjbz.fd.zol-img.com.cn/t_s320x480c/g5/M00/00/03/ChMkJlfJV_KIeqEvADUxoMPlmmQAAU-HAORrb4ANTG4356.jpg</item>
+        <item>http://sjbz.fd.zol-img.com.cn/t_s1080x1920c/g5/M00/00/03/ChMkJ1fJV--IByiAABQqnP0MnYYAAU-HAIlKxoAFCq0798.jpg</item>
+        <item>https://wx1.sinaimg.cn/bmiddle/0060lm7Tgy1fx5n651xrmj30u015l77v.jpg</item>
+        <item>https://wx4.sinaimg.cn/bmiddle/0060lm7Tgy1fx5n656ymaj30u013xmzv.jpg</item>
+        <item>https://wx2.sinaimg.cn/bmiddle/0060lm7Tgy1fx5nairof5j30u013xjwf.jpg</item>
+        <item>https://wx1.sinaimg.cn/bmiddle/0060lm7Tgy1fx5nav3ijuj30u0140q6j.jpg</item>
+        <item>https://wx2.sinaimg.cn/bmiddle/0060lm7Tgy1fx5n6r1bebj30u00ijq4f.jpg</item>
+        <item>https://wx1.sinaimg.cn/bmiddle/0060lm7Tgy1fx5nbm4wefj30u0140q8s.jpg</item>
+        <item>https://wx1.sinaimg.cn/bmiddle/0060lm7Tgy1fx5n5reck5j30u013xq7n.jpg</item>
+        <item>https://wx3.sinaimg.cn/bmiddle/0060lm7Tgy1fx5n9g6nhmj30u0140q6c.jpg</item>
+    </string-array>
 </resources>

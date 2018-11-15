@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="android_view">
-        <item>com.ithtt.androidstudy.androidview.recyclerview.RecyclerViewActivity@RecyclerView@RecyclerView控件学习</item>
+        <item>com.ithtt.androidstudy.androidview.systemview.recyclerview.RecyclerViewActivity@RecyclerView@RecyclerView控件学习</item>
     </array>
 
     <array name="android_custom_view">
