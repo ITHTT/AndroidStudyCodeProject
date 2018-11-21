@@ -1,6 +1,7 @@
 package com.ithtt.androidstudy.androidview.systemview.recyclerview;
 
 import android.content.Intent;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -21,7 +22,8 @@ public class GridLayoutActivity extends BaseActivity{
     @Override
     protected void initView() {
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        //recyclerView.addItemDecoration(new DividerItemDecoration(this,RecyclerView.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,RecyclerView.VERTICAL));
+        //recyclerView.addItemDecoration(new GridItemDecoration());
         ImageAdapter adapter=new ImageAdapter(this,1);
         recyclerView.setAdapter(adapter);
     }

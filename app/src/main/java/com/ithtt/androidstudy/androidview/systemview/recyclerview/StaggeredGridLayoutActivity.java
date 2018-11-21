@@ -28,7 +28,7 @@ public class StaggeredGridLayoutActivity extends BaseActivity{
         StaggeredGridLayoutManager staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         //staggeredGridLayoutManager.setGapStrategy(GAP_HANDLING_NONE);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
-        //recyclerView.addItemDecoration(new DividerItemDecoration(this,RecyclerView.VERTICAL));
+        recyclerView.addItemDecoration(new GridItemDecoration());
         ImageAdapter adapter=new ImageAdapter(this,1);
         recyclerView.setAdapter(adapter);
         //recyclerView.smoothScrollToPosition(0);

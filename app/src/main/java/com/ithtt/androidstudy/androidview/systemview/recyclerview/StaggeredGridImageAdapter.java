@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.LayoutHelper;
+import com.alibaba.android.vlayout.layout.StaggeredGridLayoutHelper;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.SizeUtils;
 import com.bumptech.glide.Glide;
@@ -19,26 +22,33 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.ithtt.androidstudy.R;
 
-public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder>{
+public class StaggeredGridImageAdapter extends DelegateAdapter.Adapter<StaggeredGridImageAdapter.StaggeredGridImageViewHolder>{
 
     private String[] imgData=null;
 
-    private int layoutType=0;
-
-    public ImageAdapter(Context context,int type){
+    public StaggeredGridImageAdapter(Context context){
         imgData=context.getResources().getStringArray(R.array.recycler_test_datas);
-        this.layoutType=type;
+    }
+
+
+    @Override
+    public LayoutHelper onCreateLayoutHelper() {
+        StaggeredGridLayoutHelper layoutHelper=new StaggeredGridLayoutHelper(2);
+        layoutHelper.setHGap(SizeUtils.dp2px(80));
+        layoutHelper.setVGap(0);
+        layoutHelper.setLane(2);
+        return layoutHelper;
     }
 
     @NonNull
     @Override
-    public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StaggeredGridImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_recyclerview_image_item,parent,false);
-        return new ImageViewHolder(view);
+        return new StaggeredGridImageViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ImageViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final StaggeredGridImageViewHolder holder, int position) {
         Glide.with(holder.itemView).load(imgData[position])
                 .listener(new RequestListener<Drawable>() {
                     @Override
@@ -65,35 +75,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         return imgData.length;
     }
 
-    @Override
-    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
-
-    @Override
-    public void onViewAttachedToWindow(@NonNull ImageViewHolder holder) {
-        super.onViewAttachedToWindow(holder);
-        int position=holder.getLayoutPosition();
-        System.out.println("position:"+position);
-        System.out.println("position_padding_top:"+holder.itemView.getPaddingTop());
-        ViewGroup.LayoutParams layoutParams=holder.itemView.getLayoutParams();
-        if(layoutParams instanceof RecyclerView.LayoutParams){
-            if(position%2==0){
-                //holder.itemView.setPadding(0,0,SizeUtils.dp2px(20),0);
-                ((RecyclerView.LayoutParams) layoutParams).rightMargin=SizeUtils.dp2px(30);
-            }else{
-                //holder.itemView.setPadding(SizeUtils.dp2px(20),0,0,0);
-                ((RecyclerView.LayoutParams) layoutParams).leftMargin=SizeUtils.dp2px(30);
-            }
-            ((RecyclerView.LayoutParams) layoutParams).topMargin=0;
-            holder.itemView.setLayoutParams(layoutParams);
-        }
-    }
-
-    public static final class ImageViewHolder extends RecyclerView.ViewHolder{
+    public static final class StaggeredGridImageViewHolder extends RecyclerView.ViewHolder{
         ImageView ivImg;
 
-        public ImageViewHolder(View itemView) {
+        public StaggeredGridImageViewHolder(View itemView) {
             super(itemView);
             ivImg=itemView.findViewById(R.id.iv_img);
         }
